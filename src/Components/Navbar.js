@@ -19,12 +19,6 @@ const StyledNavLink = styled(NavLink)`
   font-family: "RetroFont", sans-serif;
   font-size: 1.6rem;
   margin-right: 1.3rem;
-
-  /* Adjustments for mobile */
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    margin-right: 0.3rem;
-  }
 `;
 
 const StyledNavDropdown = styled(NavDropdown)`
@@ -36,7 +30,27 @@ const StyledNavDropdown = styled(NavDropdown)`
   /* Adjustments for mobile */
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-right: 4.5rem;
+    margin-right: 0.5rem; /* Adjusting margin for better visibility on smaller screens */
+  }
+`;
+
+const CustomNavbarContainer = styled.div`
+  @media (max-width: 768px) {
+    ${StyledNavbarBrand} {
+      &:before {
+        content: "Gaming Roots Inc."; /* Using pseudo-element content for text change */
+      }
+    }
+  }
+`;
+
+const CustomNav = styled(Nav)`
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 769px) {
+    flex-direction: row;
   }
 `;
 
@@ -44,22 +58,28 @@ export default function CustomNavbar() {
   return (
     <Navbar bg="dark" variant="dark">
       <Container fluid>
-        <StyledNavbarBrand>
-          Memorable Characters, Timeless Games
-        </StyledNavbarBrand>
+        <CustomNavbarContainer>
+          <StyledNavbarBrand>
+            Memorable Characters, Timeless Games
+          </StyledNavbarBrand>
+        </CustomNavbarContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav>
+          <CustomNav>
             <StyledNavLink exact to="/" activeClassName="active">
               Home
             </StyledNavLink>
-            <StyledNavDropdown title="Menu" id="basic-nav-dropdown">
+            <StyledNavDropdown
+              title="Menu"
+              id="basic-nav-dropdown"
+              className="mt-3 mt-sm-0 ml-sm-3"
+            >
               <NavDropdown.Item href="#action/3.1">
                 Gaming Origins
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Contact</NavDropdown.Item>
             </StyledNavDropdown>
-          </Nav>
+          </CustomNav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
