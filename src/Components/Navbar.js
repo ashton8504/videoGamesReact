@@ -38,7 +38,7 @@ const CustomNavbarContainer = styled.div`
   @media (max-width: 768px) {
     ${StyledNavbarBrand} {
       &:before {
-        content: "Gaming Roots Inc."; /* Using pseudo-element content for text change */
+        content: "Gaming Roots Inc.";
       }
     }
   }
