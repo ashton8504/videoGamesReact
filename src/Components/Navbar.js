@@ -54,6 +54,24 @@ const CustomNav = styled(Nav)`
   }
 `;
 
+const StyledNavDropdownItem = styled(NavDropdown.Item)`
+  color: black;
+  font-size: 12px;
+`;
+
+<StyledNavDropdown
+  title="Menu"
+  id="basic-nav-dropdown"
+  className="mt-3 mt-sm-0 ml-sm-3"
+>
+  <StyledNavDropdownItem as={StyledNavLink} to="/gaming-origins">
+    Gaming Origins
+  </StyledNavDropdownItem>
+  <StyledNavDropdownItem as={StyledNavLink} to="/contact">
+    Contact
+  </StyledNavDropdownItem>
+</StyledNavDropdown>;
+
 export default function CustomNavbar() {
   return (
     <Navbar bg="dark" variant="dark">
@@ -74,10 +92,12 @@ export default function CustomNavbar() {
               id="basic-nav-dropdown"
               className="mt-3 mt-sm-0 ml-sm-3"
             >
-              <NavDropdown.Item href="#action/3.1">
+              <StyledNavDropdownItem as={StyledNavLink} to="/gaming-origins">
                 Gaming Origins
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Contact</NavDropdown.Item>
+              </StyledNavDropdownItem>
+              <StyledNavDropdownItem as={StyledNavLink} to="/contact">
+                Contact
+              </StyledNavDropdownItem>
             </StyledNavDropdown>
           </CustomNav>
         </Navbar.Collapse>
