@@ -56,7 +56,12 @@ const CustomNav = styled(Nav)`
 
 const StyledNavDropdownItem = styled(NavDropdown.Item)`
   color: black;
-  font-size: 12px;
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: "RetroFont", sans-serif;
+  display: block;
+  &:hover {
+    color: #1E90FF; 
 `;
 
 <StyledNavDropdown
