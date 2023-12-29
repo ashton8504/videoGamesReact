@@ -13,7 +13,7 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: black; /* Change the color to black */
+  color: black;
   text-decoration: none;
   margin-top: 7.5px;
   font-family: "RetroFont", sans-serif;
@@ -27,7 +27,6 @@ const StyledNavDropdown = styled(NavDropdown)`
   font-family: "RetroFont", sans-serif;
   margin-right: 4.5rem;
 
-  /* Adjustments for mobile */
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-right: 0.5rem;
@@ -35,11 +34,9 @@ const StyledNavDropdown = styled(NavDropdown)`
 `;
 
 const CustomNavbarContainer = styled.div`
-  @media (max-width: 768px) {
-    ${StyledNavbarBrand} {
-      &:before {
-        content: "Gaming Roots Inc.";
-      }
+  ${StyledNavbarBrand} {
+    &:before {
+      content: "Gaming Roots Inc.";
     }
   }
 `;
@@ -47,6 +44,7 @@ const CustomNavbarContainer = styled.div`
 const CustomNav = styled(Nav)`
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: 769px) {
@@ -67,12 +65,10 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
 
 export default function CustomNavbar() {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar expand="lg" bg="light" variant="light">
       <Container fluid>
         <CustomNavbarContainer>
-          <StyledNavbarBrand>
-            Memorable Characters, Timeless Games
-          </StyledNavbarBrand>
+          <StyledNavbarBrand />
         </CustomNavbarContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
