@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-// import SecondPage from "./Components/SecondPage";
+import Contact from "./Contact";
 
 const StyledContainer = styled.div`
   background-color: #ffffcc;
@@ -25,7 +25,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/secondpage" element={<SecondPage />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </StyledContainer>
