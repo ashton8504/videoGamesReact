@@ -1,13 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const StyledAsciiArt = styled.div`
-  font-family: monospace;
-  font-size: 16px;
-  position: relative;
-  min-height: 100vh;
-`;
-
 const blinkAnimation = keyframes`
   0% { opacity: 0; }
   30% { opacity: 1; }
@@ -80,6 +73,27 @@ const StyledMessage = styled.div`
   margin-left: 30px;
 `;
 
+const StyledDivider = styled.hr`
+  width: 50%;
+  border: 1px solid;
+`;
+
+const StyledList = styled.ul`
+  list-style: none;
+  padding: 0;
+  font-family: "RetroFont", sans-serif;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+`;
+
+const StyledLinks = styled.a`
+  font-family: "RetroFont", sans-serif;
+  font-size: 1.6rem;
+  list-style: none;
+  margin-bottom: 0.5rem;
+  color: #6ee8b4;
+`;
+
 export default function ContactPage() {
   const asciiArt = `
    _    _      _ _        __          __        _     _ 
@@ -96,10 +110,44 @@ export default function ContactPage() {
         <StyledGreeting>
           <pre>{asciiArt}</pre>
           <StyledMessage>
-            <p>Start a Conversation</p>
+            {/* <p>Start a Conversation</p> */}
             <p>
-              &gt;<StyledBlink>_ Say Hello</StyledBlink>
+              &gt;<StyledBlink>_ Say Hello:</StyledBlink>
             </p>
+            <StyledDivider />
+
+            <StyledList>
+              <li>
+                <StyledLinks
+                  href="https://ashton-codes.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="Portfolio"
+                >
+                  Portfolio
+                </StyledLinks>
+              </li>
+              <li>
+                <StyledLinks
+                  href="https://github.com/ashton8504"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="GitHub"
+                >
+                  GitHub
+                </StyledLinks>
+              </li>
+              <li>
+                <StyledLinks
+                  href="https://www.linkedin.com/in/ashton-codes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="LinkedIn"
+                >
+                  LinkedIn
+                </StyledLinks>
+              </li>
+            </StyledList>
           </StyledMessage>
         </StyledGreeting>
       </StyledPre>
