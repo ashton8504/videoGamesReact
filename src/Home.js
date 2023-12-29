@@ -24,7 +24,14 @@ const SectionHeader = styled.h1`
 `;
 
 const Divider = styled.hr`
-  width: 70%;
+  width: 40%;
+  border: 2px solid red;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+`;
+
+const Divider2 = styled.hr`
+  width: 20%;
   border: 2px solid red;
   margin: 0 auto;
   margin-bottom: 2rem;
@@ -42,7 +49,7 @@ function Home() {
         <Divider />
         <VideoGameList />
         <SectionHeader>Game List</SectionHeader>
-        <Divider />
+        <Divider2 />
         <GameList />
       </PageContent>
       <Footer />
