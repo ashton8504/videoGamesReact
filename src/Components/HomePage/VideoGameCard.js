@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import VideoGame from "./VideoGame";
-import videoGames from "../data/videoGames";
+import videoGames from "../../data/videoGames";
 
 export default function VideoGameList() {
   const StyledList = styled.div`

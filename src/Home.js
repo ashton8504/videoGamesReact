@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import CustomNavbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import CharacterList from "./Components/CharacterCard";
-import VideoGameList from "./Components/VideoGameCard";
-import GameList from "./Components/GameList";
+import CharacterList from "./Components/HomePage/CharacterCard";
+import VideoGameList from "./Components/HomePage/VideoGameCard";
+import GameList from "./Components/HomePage/GameList";
 
 // Styled Components (if needed)
 const PageContent = styled.div`

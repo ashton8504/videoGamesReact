@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Character from "./Character";
-import videoGameCharacters from "../data/videoGameCharacters";
+import videoGameCharacters from "../../data/videoGameCharacters";
 
 const StyledList = styled.div`
   display: flex;
