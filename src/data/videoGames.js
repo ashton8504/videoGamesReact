@@ -8,8 +8,8 @@ const videoGames = [
     controllerImage: "imgs/snes-controller.jpg",
   },
   {
-    name: "Super Mario World",
-    game: "Super Mario Brothers",
+    name: "Super Mario Bro's",
+    game: "Super Mario World",
     releaseYear: 1990,
     company: "Nintendo",
     photoName: "supermario.jpg",
@@ -24,8 +24,8 @@ const videoGames = [
     controllerImage: "imgs/n64-controller.jpg",
   },
   {
-    name: "WCW vs NWO Revenge",
-    game: "WCW vs NWO",
+    name: "WCW vs NWO ",
+    game: "Revenge",
     releaseYear: 1998,
     company: "THQ",
     photoName: "wcw.jpg",
