@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 const blinkAnimation = keyframes`
@@ -96,6 +97,14 @@ const StyledLinks = styled.a`
   margin-left: 0.5rem;
 `;
 
+const StyledNavLink = styled(Link)`
+  font-family: "RetroFont", sans-serif;
+  font-size: 1.6rem;
+  list-style: none;
+  margin-bottom: 0.5rem;
+  color: #6ee8b4;
+`;
+
 export default function ContactPage() {
   const asciiArt = `
    _    _      _ _        __          __        _     _ 
@@ -104,6 +113,8 @@ export default function ContactPage() {
   |  __  |/ _ \\ | |/ _ \\    \\ \\/  \\/ / _ \\| '__| |/ _' |
   | |  | |  __/ | | (_) |    \\  /\\  / (_) | |  | | (_| |
   |_|  |_|\\___|_|_|\\___/      \\/  \\/ \\___/|_|  |_|\\__,_|
+
+  I'm Ashton...
 `;
 
   return (
@@ -154,6 +165,11 @@ export default function ContactPage() {
                   alt="Contact"
                 >
                   Contact
+                </StyledLinks>
+              </li>
+              <li>
+                <StyledLinks>
+                  <StyledNavLink to="/">Go back to Home</StyledNavLink>
                 </StyledLinks>
               </li>
             </StyledList>

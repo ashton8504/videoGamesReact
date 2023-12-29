@@ -7,9 +7,7 @@ import ContactPage from "./Components/Contact/ContactPage";
 export default function Contact() {
   return (
     <div className="Contact">
-      <CustomNavbar />
       <ContactPage />
-      <Footer />
     </div>
   );
 }
