@@ -13,7 +13,7 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: #060f0a;
+  color: black; /* Change the color to black */
   text-decoration: none;
   margin-top: 7.5px;
   font-family: "RetroFont", sans-serif;
@@ -22,7 +22,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const StyledNavDropdown = styled(NavDropdown)`
-  color: white;
+  color: black;
   font-size: 1.6rem;
   font-family: "RetroFont", sans-serif;
   margin-right: 4.5rem;
@@ -61,21 +61,9 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
   font-family: "RetroFont", sans-serif;
   display: block;
   &:hover {
-    color: #1E90FF; 
+    color: #1e90ff;
+  }
 `;
-
-<StyledNavDropdown
-  title="Menu"
-  id="basic-nav-dropdown"
-  className="mt-3 mt-sm-0 ml-sm-3"
->
-  <StyledNavDropdownItem as={StyledNavLink} to="/gaming-origins">
-    Gaming Origins
-  </StyledNavDropdownItem>
-  <StyledNavDropdownItem as={StyledNavLink} to="/contact">
-    Contact
-  </StyledNavDropdownItem>
-</StyledNavDropdown>;
 
 export default function CustomNavbar() {
   return (

@@ -10,14 +10,6 @@ const StyledContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  //Styles for Mobile Design NOT SURE IF I NEED THIS
-  @media (max-width: 500px) {
-    background-color: #ffffcc;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
 `;
 
 function App() {
