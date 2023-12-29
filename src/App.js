@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Contact from "./Contact";
+import Origins from "./Origins";
 
 const StyledContainer = styled.div`
   background-color: #ffffcc;
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gaming-origins" element={<Origins />} />
         </Routes>
       </BrowserRouter>
     </StyledContainer>
