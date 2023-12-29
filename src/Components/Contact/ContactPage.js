@@ -96,9 +96,9 @@ export default function ContactPage() {
         <StyledGreeting>
           <pre>{asciiArt}</pre>
           <StyledMessage>
-            <p>Would you like to play a game?</p>
+            <p>Start a Conversation</p>
             <p>
-              &gt;<StyledBlink>_</StyledBlink>
+              &gt;<StyledBlink>_ Say Hello</StyledBlink>
             </p>
           </StyledMessage>
         </StyledGreeting>
