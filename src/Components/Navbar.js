@@ -13,7 +13,7 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: white;
+  color: #060f0a;
   text-decoration: none;
   margin-top: 7.5px;
   font-family: "RetroFont", sans-serif;
@@ -30,7 +30,7 @@ const StyledNavDropdown = styled(NavDropdown)`
   /* Adjustments for mobile */
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-right: 0.5rem; /* Adjusting margin for better visibility on smaller screens */
+    margin-right: 0.5rem;
   }
 `;
 
@@ -79,7 +79,7 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
 
 export default function CustomNavbar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
       <Container fluid>
         <CustomNavbarContainer>
           <StyledNavbarBrand>

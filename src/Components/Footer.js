@@ -5,7 +5,7 @@ const StyledFooter = styled.footer`
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #060f0a;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -13,8 +13,8 @@ const StyledFooter = styled.footer`
 `;
 
 const StyledFooterImage = styled.img`
-  height: 50px;
-  width: 50px;
+  height: 150px;
+  width: 150px;
   filter: invert(80%) hue-rotate(180deg);
 `;
 

@@ -9,7 +9,7 @@ import GameList from "./Components/HomePage/GameList";
 
 // Styled Components (if needed)
 const PageContent = styled.div`
-  background-color: #ffffcc;
+  background-color: #060f0a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const PageContent = styled.div`
 
 const SectionHeader = styled.h1`
   font-size: 3rem;
-  color: dodgerblue;
+  color: white;
   text-align: center;
   margin-top: 5rem;
   font-family: "RetroFont", sans-serif;
@@ -25,14 +25,14 @@ const SectionHeader = styled.h1`
 
 const Divider = styled.hr`
   width: 40%;
-  border: 2px solid red;
+  border: 2px solid antiquewhite;
   margin: 0 auto;
   margin-bottom: 2rem;
 `;
 
 const Divider2 = styled.hr`
   width: 20%;
-  border: 2px solid red;
+  border: 2px solid antiquewhite;
   margin: 0 auto;
   margin-bottom: 2rem;
 `;
