@@ -10,6 +10,10 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
   font-size: 1.8rem;
   margin-top: 0.5rem;
   font-family: "RetroFont", sans-serif;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
