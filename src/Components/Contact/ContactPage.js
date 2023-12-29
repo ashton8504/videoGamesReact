@@ -83,7 +83,7 @@ const StyledList = styled.ul`
   padding: 0;
   font-family: "RetroFont", sans-serif;
   font-size: 1.6rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `;
 
 const StyledLinks = styled.a`
@@ -93,6 +93,7 @@ const StyledLinks = styled.a`
   margin-bottom: 0.5rem;
   color: #6ee8b4;
   text-decoration: none;
+  margin-left: 0.5rem;
 `;
 
 export default function ContactPage() {
@@ -111,11 +112,10 @@ export default function ContactPage() {
         <StyledGreeting>
           <pre>{asciiArt}</pre>
           <StyledMessage>
-            {/* <p>Start a Conversation</p> */}
+            <StyledDivider />
             <p>
               &gt;<StyledBlink>_ Say Hello:</StyledBlink>
             </p>
-            <StyledDivider />
 
             <StyledList>
               <li>
