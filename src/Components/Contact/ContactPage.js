@@ -92,6 +92,7 @@ const StyledLinks = styled.a`
   list-style: none;
   margin-bottom: 0.5rem;
   color: #6ee8b4;
+  text-decoration: none;
 `;
 
 export default function ContactPage() {
@@ -145,6 +146,14 @@ export default function ContactPage() {
                   alt="LinkedIn"
                 >
                   LinkedIn
+                </StyledLinks>
+              </li>
+              <li>
+                <StyledLinks
+                  href="mailto:ashtoncodes8504@gmail.com"
+                  alt="Contact"
+                >
+                  Contact
                 </StyledLinks>
               </li>
             </StyledList>
