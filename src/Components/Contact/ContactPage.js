@@ -105,6 +105,27 @@ const StyledNavLink = styled(Link)`
   color: #6ee8b4;
 `;
 
+const StyledImage = styled.img`
+  width: 50%;
+  height: 600px;
+  border-radius: 5px;
+  border: 2px solid lightblue;
+  display: block;
+  margin: 5rem auto 0;
+`;
+
+const StyledImageContainer = styled.div`
+  border-radius: 5px;
+  padding-bottom: 6rem;
+`;
+
+const StyleImageCaption = styled.p`
+  font-family: "RetroFont", sans-serif;
+  color: #6ee8b4;
+  text-align: center;
+  margin-top: 1rem;
+`;
+
 export default function ContactPage() {
   const asciiArt = `
    _    _      _ _        __          __        _     _ 
@@ -178,6 +199,12 @@ export default function ContactPage() {
       </StyledPre>
       <StyledInterlaced />
       <StyledGlare />
+      <StyledImageContainer>
+        <StyledImage src="imgs/games.jpg" alt="Photo of video games" />
+        <StyleImageCaption>
+          "Hanging out down the street, coding something I need to complete."
+        </StyleImageCaption>
+      </StyledImageContainer>
     </StyledContactPage>
   );
 }
