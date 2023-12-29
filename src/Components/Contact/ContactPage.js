@@ -135,7 +135,7 @@ export default function ContactPage() {
   | |  | |  __/ | | (_) |    \\  /\\  / (_) | |  | | (_| |
   |_|  |_|\\___|_|_|\\___/      \\/  \\/ \\___/|_|  |_|\\__,_|
 
-  I'm Ashton...
+  I'm Ashton... 
 `;
 
   return (
