@@ -24,6 +24,10 @@ const StyledContactPage = styled.div`
   font-size: 16px;
   position: relative;
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const StyledPre = styled.pre`
@@ -63,8 +67,8 @@ const StyledBlink = styled.span`
 
 const StyledGreeting = styled.div`
   pre {
-    font-size: 24px; /* Adjust the font size */
-    margin-top: 20px; /* Add margin-top */
+    font-size: 24px;
+    margin-top: 20px;
   }
 `;
 
@@ -72,6 +76,11 @@ const StyledMessage = styled.div`
   font-size: 24px;
   margin-top: 20px;
   margin-left: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-left: 10px;
+  }
 `;
 
 const StyledDivider = styled.hr`
@@ -85,6 +94,14 @@ const StyledList = styled.ul`
   font-family: "RetroFont", sans-serif;
   font-size: 1.6rem;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column; /* Updated for mobile */
+  align-items: flex-start; /* Updated for mobile */
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
 `;
 
 const StyledLinks = styled.a`
@@ -95,6 +112,11 @@ const StyledLinks = styled.a`
   color: #6ee8b4;
   text-decoration: none;
   margin-left: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
 `;
 
 const StyledNavLink = styled(Link)`
@@ -103,6 +125,12 @@ const StyledNavLink = styled(Link)`
   list-style: none;
   margin-bottom: 0.5rem;
   color: #6ee8b4;
+  text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -112,6 +140,12 @@ const StyledImage = styled.img`
   border: 2px solid lightblue;
   display: block;
   margin: 5rem auto 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
 `;
 
 const StyledImageContainer = styled.div`
@@ -126,6 +160,23 @@ const StyleImageCaption = styled.p`
   margin-top: 1rem;
 `;
 
+const StyledAsciiArt = styled.pre`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledHelloWorld = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    font-family: "RetroFont", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+  }
+`;
 export default function ContactPage() {
   const asciiArt = `
    _    _      _ _        __          __        _     _ 
@@ -142,7 +193,8 @@ export default function ContactPage() {
     <StyledContactPage>
       <StyledPre>
         <StyledGreeting>
-          <pre>{asciiArt}</pre>
+          <StyledAsciiArt>{asciiArt}</StyledAsciiArt>
+          <StyledHelloWorld>Hello World</StyledHelloWorld>
           <StyledMessage>
             <StyledDivider />
             <p>
