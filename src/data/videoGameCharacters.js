@@ -43,7 +43,7 @@ const videoGameCharacters = [
     photoName: "lara-croft.jpg",
   },
   {
-    name: "Katana",
+    name: "Kitana",
     game: "Mortal Kombat",
     abilities: "Martial Arts, Weapons, Fire",
     photoName: "katana.jpg",
