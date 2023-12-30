@@ -18,7 +18,8 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: black;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
   text-decoration: none;
   margin-top: 7.5px;
   font-family: "RetroFont", sans-serif;
@@ -27,7 +28,16 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const StyledNavDropdown = styled(NavDropdown)`
-  color: black;
+  .nav-link {
+    color: hsl(154, 84%, 70%);
+    text-shadow: 0 0 4px hsl(154, 84%, 70%);
+    &:hover,
+    &:focus,
+    &:active {
+      color: #68dbaa;
+      background-color: transparent;
+    }
+  }
   font-size: 1.6rem;
   font-family: "RetroFont", sans-serif;
   margin-right: 4.5rem;
@@ -42,6 +52,8 @@ const CustomNavbarContainer = styled.div`
   ${StyledNavbarBrand} {
     &:before {
       content: "Gaming Roots Inc.";
+      color: hsl(154, 84%, 70%);
+      text-shadow: 0 0 4px hsl(154, 84%, 70%);
     }
   }
 `;
@@ -58,7 +70,6 @@ const CustomNav = styled(Nav)`
 `;
 
 const StyledNavDropdownItem = styled(NavDropdown.Item)`
-  color: black;
   font-size: 14px;
   margin-left: 10px;
   font-family: "RetroFont", sans-serif;
@@ -68,7 +79,7 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
   }
 `;
 
-const CustomNavbar = () => {
+export default function CustomNavbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -89,7 +100,7 @@ const CustomNavbar = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" bg="light" variant="light">
+    <Navbar expand="lg" variant="light" style={{ backgroundColor: "#060F0A" }}>
       <Container fluid>
         <CustomNavbarContainer>
           <StyledNavbarBrand />
@@ -107,7 +118,6 @@ const CustomNavbar = () => {
               Home
             </StyledNavLink>
             {isMobile ? (
-              // Render the links directly for mobile devices
               <>
                 <StyledNavLink to="/gaming-origins">
                   Gaming Origins
@@ -115,7 +125,6 @@ const CustomNavbar = () => {
                 <StyledNavLink to="/contact">Contact</StyledNavLink>
               </>
             ) : (
-              // Render the dropdown for larger screens
               <StyledNavDropdown
                 title="Menu"
                 id="basic-nav-dropdown"
@@ -134,6 +143,4 @@ const CustomNavbar = () => {
       </Container>
     </Navbar>
   );
-};
-
-export default CustomNavbar;
+}
