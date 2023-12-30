@@ -108,7 +108,9 @@ export default function CustomNavbar() {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           onClick={toggleMobileMenu}
+          style={{ border: "1px solid #fff" }}
         />
+
         <Navbar.Collapse
           id="basic-navbar-nav"
           className={`justify-content-end${showMenu ? " show" : ""}`}
