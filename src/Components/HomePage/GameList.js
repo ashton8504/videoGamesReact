@@ -26,11 +26,10 @@ const StyledForm = styled.form`
   margin: 1rem;
   padding: 1rem;
   background-color: #f2f2f2;
-  box-shadow: 3px 3px 3px 3px #d3d3d3;
+
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
-    box-shadow: 5px 5px 5px 5px #d3d3d3;
   }
 `;
 

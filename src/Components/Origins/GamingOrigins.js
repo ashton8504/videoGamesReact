@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 //Styled Components
-
 const StyledH1 = styled.h1`
   font-size: 3rem;
   text-align: center;

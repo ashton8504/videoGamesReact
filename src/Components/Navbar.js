@@ -19,7 +19,7 @@ const StyledNavbarBrand = styled(Navbar.Brand)`
 
 const StyledNavLink = styled(NavLink)`
   color: hsl(154, 84%, 70%);
-  text-shadow: 0 0 4px hsl(154, 84%, 70%);
+
   text-decoration: none;
   margin-top: 7.5px;
   font-family: "RetroFont", sans-serif;
@@ -30,7 +30,7 @@ const StyledNavLink = styled(NavLink)`
 const StyledNavDropdown = styled(NavDropdown)`
   .nav-link {
     color: hsl(154, 84%, 70%);
-    text-shadow: 0 0 4px hsl(154, 84%, 70%);
+
     &:hover,
     &:focus,
     &:active {
@@ -53,7 +53,6 @@ const CustomNavbarContainer = styled.div`
     &:before {
       content: "Gaming Roots Inc.";
       color: hsl(154, 84%, 70%);
-      text-shadow: 0 0 4px hsl(154, 84%, 70%);
     }
   }
 `;
@@ -74,9 +73,6 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
   margin-left: 10px;
   font-family: "RetroFont", sans-serif;
   display: block;
-  &:hover {
-    color: #1e90ff;
-  }
 `;
 
 export default function CustomNavbar() {
