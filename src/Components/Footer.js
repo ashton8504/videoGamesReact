@@ -49,11 +49,13 @@ const StyledFooterImage = styled.img`
 const StyledSocialLink = styled.a`
   margin: 0 10px;
   filter: invert(80%) hue-rotate(180deg);
-
   transition: filter 0.3s ease;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
 
   &:hover {
     filter: none;
+    filter: invert(20%) hue-rotate(180deg);
   }
 `;
 
