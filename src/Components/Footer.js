@@ -82,7 +82,7 @@ export default function Footer() {
           <img src="imgs/linkedin.svg" alt="LinkedIn" width="55" height="55" />
         </StyledSocialLink>
       </StyledSocial>
-      <StyledFooterHeader>Know Your Roots Inc.</StyledFooterHeader>
+      <StyledFooterHeader>Know Your Roots Est. 1985</StyledFooterHeader>
     </StyledFooter>
   );
 }
