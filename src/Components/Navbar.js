@@ -108,7 +108,11 @@ export default function CustomNavbar() {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           onClick={toggleMobileMenu}
-          style={{ border: "1px solid #fff" }}
+          style={{
+            border: "1px solid hsl(154, 84%, 70%)",
+
+            backgroundColor: "#68dbaa",
+          }}
         />
 
         <Navbar.Collapse
