@@ -1,4 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+//Styled Components
+
+const StyledH1 = styled.h1`
+  font-size: 3rem;
+  text-align: center;
+  font-family: "RetroFont", sans-serif;
+  color: #6ee8b4;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
 
 export default function SecretPage() {
   return (
@@ -386,6 +398,7 @@ export default function SecretPage() {
         `}
       </style>
       <div class="container">
+        <StyledH1>How it all began...</StyledH1>
         <div class="arcade-machine">
           <div class="shadow"></div>
           <div class="top">
