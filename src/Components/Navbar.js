@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
@@ -67,34 +68,72 @@ const StyledNavDropdownItem = styled(NavDropdown.Item)`
   }
 `;
 
-export default function CustomNavbar() {
+const CustomNavbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+    handleResize();
+    mediaQuery.addListener(handleResize);
+    return () => {
+      mediaQuery.removeListener(handleResize);
+    };
+  }, []);
+
   return (
     <Navbar expand="lg" bg="light" variant="light">
       <Container fluid>
         <CustomNavbarContainer>
           <StyledNavbarBrand />
         </CustomNavbarContainer>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={toggleMobileMenu}
+        />
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className={`justify-content-end${showMenu ? " show" : ""}`}
+        >
           <CustomNav>
             <StyledNavLink exact to="/" activeClassName="active">
               Home
             </StyledNavLink>
-            <StyledNavDropdown
-              title="Menu"
-              id="basic-nav-dropdown"
-              className="mt-3 mt-sm-0 ml-sm-3"
-            >
-              <StyledNavDropdownItem as={StyledNavLink} to="/gaming-origins">
-                Gaming Origins
-              </StyledNavDropdownItem>
-              <StyledNavDropdownItem as={StyledNavLink} to="/contact">
-                Contact
-              </StyledNavDropdownItem>
-            </StyledNavDropdown>
+            {isMobile ? (
+              // Render the links directly for mobile devices
+              <>
+                <StyledNavLink to="/gaming-origins">
+                  Gaming Origins
+                </StyledNavLink>
+                <StyledNavLink to="/contact">Contact</StyledNavLink>
+              </>
+            ) : (
+              // Render the dropdown for larger screens
+              <StyledNavDropdown
+                title="Menu"
+                id="basic-nav-dropdown"
+                className="mt-3 mt-sm-0 ml-sm-3"
+              >
+                <StyledNavDropdownItem as={StyledNavLink} to="/gaming-origins">
+                  Gaming Origins
+                </StyledNavDropdownItem>
+                <StyledNavDropdownItem as={StyledNavLink} to="/contact">
+                  Contact
+                </StyledNavDropdownItem>
+              </StyledNavDropdown>
+            )}
           </CustomNav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
+
+export default CustomNavbar;
