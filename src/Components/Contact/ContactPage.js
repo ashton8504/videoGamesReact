@@ -175,8 +175,12 @@ const StyledHelloWorld = styled.div`
     font-size: 50px;
     text-align: center;
     margin-top: 20px;
+    h5 {
+      text-align: left;
+    }
   }
 `;
+
 export default function ContactPage() {
   const asciiArt = `
    _    _      _ _        __          __        _     _ 
@@ -194,11 +198,16 @@ export default function ContactPage() {
       <StyledPre>
         <StyledGreeting>
           <StyledAsciiArt>{asciiArt}</StyledAsciiArt>
-          <StyledHelloWorld>Hello World</StyledHelloWorld>
+          <StyledHelloWorld>
+            Hello World
+            <br />
+            <h5>I'm Ashton...</h5>
+          </StyledHelloWorld>
+
           <StyledMessage>
             <StyledDivider />
             <p>
-              &gt;<StyledBlink>_ Say Hello:</StyledBlink>
+              &gt;<StyledBlink> Say Hello_ </StyledBlink>
             </p>
 
             <StyledList>
