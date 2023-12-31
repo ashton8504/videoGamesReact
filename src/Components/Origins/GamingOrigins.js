@@ -12,6 +12,17 @@ const StyledH1 = styled.h1`
   margin-bottom: 2rem;
 `;
 
+const StyledParagraph = styled.p`
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "RetroFont", sans-serif;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 800px; /* Set your desired max width */
+  margin: 0 auto; /* Center the paragraph */
+`;
 export default function SecretPage() {
   return (
     <div>
@@ -427,7 +438,27 @@ export default function SecretPage() {
           </div>
         </div>
       </div>
-      <p></p>
+      <StyledParagraph>
+        My first video game memory was back in the 1980's and playing Super
+        Mario Bro's for the first time.
+      </StyledParagraph>
+      <br />
+      <StyledParagraph>
+        Since then I have had many great memories playing video games from Mario
+        to Zelda to Last Of Us. I still remember what it was like to have a snow
+        day and being able to play Ocarina of Time.
+      </StyledParagraph>
+      <br />
+      <StyledParagraph>
+        I have always been fascinated with video games and how they are made. I
+        have also always enjoyed a good story regardless of the medium. This is
+        why I decided to learn how to code and become a developer.
+      </StyledParagraph>
+      <br />
+      {/* <StyledParagraph>
+        I hope you enjoyed this website. If you like leave a comment below about
+        one of your favorite memories while playing a video game.
+      </StyledParagraph> */}
     </div>
   );
 }
