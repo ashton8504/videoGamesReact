@@ -88,7 +88,6 @@ function Home() {
           <Divider2 />
           <GameList />
         </PageContent>
-
         <StyledInterlaced />
       </StyledContactPage>
       <Footer />

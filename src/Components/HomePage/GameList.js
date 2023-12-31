@@ -15,6 +15,8 @@ const StyledText = styled.p`
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "RetroFont", sans-serif;
+  border-bottom: 2px solid lightblue;
+  max-width: 80%;
 `;
 
 const StyledForm = styled.form`
@@ -22,12 +24,10 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  border: 2px solid pink;
   border-radius: 5px;
   margin: 1rem;
   padding: 1rem;
-  background-color: #f2f2f2;
-
+  background-color: black;
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
@@ -64,12 +64,12 @@ const StyledListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 0; /* Remove default margin */
+  margin-top: 0;
 `;
 
 const StyledList = styled.ul`
   list-style: none;
-  padding: 0; /* Remove default padding */
+  padding: 0;
   font-family: "RetroFont", sans-serif;
   font-size: 1.2rem;
   color: #000;
@@ -86,12 +86,12 @@ const StyledGameListHeader = styled.h2`
 const StyledListItems = styled.li`
   font-family: "RetroFont", sans-serif;
   font-size: 1.2rem;
-  color: #c20005;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
   margin-bottom: 0.5rem;
 `;
 
 const StyledBorderBottom = styled.hr`
-  border: 1px solid #c20005;
   width: 70%;
   margin: 0 auto;
   margin-bottom: 0.9rem;
