@@ -26,6 +26,7 @@ const StyledForm = styled.form`
   width: 300px;
   border-radius: 5px;
   margin: 1rem;
+  border: 3px solid antiquewhite;
   padding: 1rem;
   background-color: black;
   transition: all 0.3s ease-in-out;
@@ -64,7 +65,9 @@ const StyledListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 0;
+  margin-top: 30px;
+  border: 1px solid antiquewhite;
+  border-radius: 5px;
 `;
 
 const StyledList = styled.ul`
@@ -122,8 +125,10 @@ export default function GameList() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGames((prevGames) => [...prevGames, newGame]);
-    setNewGame("");
+    if (newGame.trim() !== "") {
+      setGames((prevGames) => [...prevGames, newGame]);
+      setNewGame("");
+    }
   };
 
   const handleDelete = (e) => {
