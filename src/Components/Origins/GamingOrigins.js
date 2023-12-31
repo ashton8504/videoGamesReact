@@ -23,7 +23,7 @@ const StyledParagraph = styled.p`
   max-width: 800px; /* Set your desired max width */
   margin: 0 auto; /* Center the paragraph */
 `;
-export default function SecretPage() {
+export default function GamingOrigins() {
   return (
     <div>
       <style>
