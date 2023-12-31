@@ -38,7 +38,7 @@ const StyledName = styled.h3`
 
 const StyledGame = styled.h4`
   font-size: 1.2rem;
-  color: hsl(154, 84%, 70%);
+  color: white;
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
   text-align: center;
   margin-bottom: 1rem;
@@ -47,7 +47,7 @@ const StyledGame = styled.h4`
 
 const StyledAbilities = styled.p`
   font-size: 1rem;
-  color: hsl(154, 84%, 70%);
+  color: white;
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
   text-align: center;
   margin-bottom: 1rem;

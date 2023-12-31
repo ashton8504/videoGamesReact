@@ -86,7 +86,7 @@ const StyledGameListHeader = styled.h2`
 const StyledListItems = styled.li`
   font-family: "RetroFont", sans-serif;
   font-size: 1.2rem;
-  color: hsl(154, 84%, 70%);
+  color: white;
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
   margin-bottom: 0.5rem;
 `;
