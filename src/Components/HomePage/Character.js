@@ -24,7 +24,7 @@ const StyledImage = styled.img`
 `;
 
 const StyledName = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   margin-bottom: 1rem;
   font-family: "RetroFont", sans-serif;
