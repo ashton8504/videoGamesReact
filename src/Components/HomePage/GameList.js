@@ -11,8 +11,9 @@ const StyledContainer = styled.div`
 `;
 
 const StyledText = styled.p`
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: bold;
+  font-size: 2.5rem;
   font-family: "RetroFont", sans-serif;
 `;
 
