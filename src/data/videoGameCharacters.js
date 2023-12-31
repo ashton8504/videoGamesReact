@@ -4,13 +4,13 @@ const videoGameCharacters = [
     name: "Mario",
     game: "Super Mario Brothers",
     abilities: "Jumping, Fireball, Super Mushrooms",
-    photoName: "MarioPixel.gif",
+    photoName: "MarioPixel.png",
   },
   {
     name: "Link",
     game: "The Legend of Zelda",
     abilities: "Swordsmanship, Tools, Magic",
-    photoName: "LinkPixel.gif",
+    photoName: "LinkPixel.png",
   },
   {
     name: "Joel and Ellie  ",
@@ -28,13 +28,13 @@ const videoGameCharacters = [
     name: "Scoprion",
     game: "Mortal Kombat",
     abilities: "Martial Arts, Weapons, Fire",
-    photoName: "ScorpionPixel.gif",
+    photoName: "ScorpionPixel.png",
   },
   {
     name: "Tifa Lockhart",
     game: "Final Fantasy VII",
     abilities: "Martial Arts, Magic, Weapons",
-    photoName: "TifaLockartPixel.gif",
+    photoName: "TifaPixel.png",
   },
   {
     name: "Lara Croft",
