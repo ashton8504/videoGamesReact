@@ -63,6 +63,14 @@ const videoGames = [
     photoName: "baldursGate.jpg",
     controllerImage: "imgs/playstation-controller.jpg",
   },
+  {
+    name: "Tails of Iron",
+    game: "Tails of Iron",
+    releaseYear: 2021,
+    company: "Odd Bug Studio",
+    photoName: "TailsOfIron.jpg",
+    controllerImage: "imgs/playstation-controller.jpg",
+  },
 ];
 
 export default videoGames;
