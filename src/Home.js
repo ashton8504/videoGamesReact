@@ -6,8 +6,7 @@ import CharacterList from "./Components/HomePage/CharacterCard";
 import VideoGameList from "./Components/HomePage/VideoGameCard";
 import GameList from "./Components/HomePage/GameList";
 
-// Keyframe animations
-
+//Retro Styles For Terminal
 const linesAnimation = keyframes`
   0% { background-position: 0px 0px; }
   50% { background-position: 0px 0px; }
@@ -15,7 +14,6 @@ const linesAnimation = keyframes`
   100% { background-position: 0px 2px; }
 `;
 
-// Styled Components
 const StyledContactPage = styled.div`
   background: hsl(154, 50%, 5%);
   color: hsl(154, 84%, 70%);
