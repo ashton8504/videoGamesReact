@@ -84,6 +84,7 @@ const videoGameCharacters = [
     abilities: "Martial Arts, Weapons, Fire",
     photoName: "CammyPixel.png",
   },
+
   // Add more characters as needed
 ];
 
