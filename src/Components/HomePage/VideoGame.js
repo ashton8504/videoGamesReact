@@ -10,6 +10,7 @@ const StyledCard = styled.div`
   margin-bottom: 2rem;
   padding: 1rem;
   background-color: black;
+  border: 3px solid antiquewhite;
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
