@@ -5,17 +5,15 @@ const StyledCard = styled.div`
   width: 370px;
   cursor: pointer;
   height: 530px;
-  border: 2px solid pink;
   border-radius: 5px;
   margin: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: #f2f2f2;
+  background-color: black;
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
-
   perspective: 1000px;
 `;
 
@@ -24,7 +22,6 @@ const StyledImage = styled.img`
   height: 300px;
   border-radius: 5px;
   margin-bottom: 1rem;
-  border: 2px solid lightblue;
   backface-visibility: hidden;
   transition: transform 0.5s ease-in-out;
   cursor: pointer;
@@ -32,7 +29,6 @@ const StyledImage = styled.img`
 
 const StyledName = styled.h3`
   font-size: 1.5rem;
-  color: #000;
   text-align: center;
   margin-bottom: 1rem;
   font-family: "RetroFont", sans-serif;
@@ -40,7 +36,8 @@ const StyledName = styled.h3`
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  color: #1e90ff;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
 `;
 
 const StyledControllerImage = styled.img`
@@ -60,7 +57,8 @@ const StyledControllerImage = styled.img`
 
 const StyledGame = styled.h4`
   font-size: 1.2rem;
-  color: #000;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
   text-align: center;
   margin-bottom: 1rem;
   font-family: "RetroFont", sans-serif;
@@ -68,7 +66,8 @@ const StyledGame = styled.h4`
 
 const StyledAbilities = styled.p`
   font-size: 1rem;
-  color: #000;
+  color: hsl(154, 84%, 70%);
+  text-shadow: 0 0 4px hsl(154, 84%, 70%);
   text-align: center;
   margin-bottom: 1rem;
   font-family: "RetroFont", sans-serif;
