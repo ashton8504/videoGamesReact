@@ -1,4 +1,4 @@
-# React Exploration Project with my Favorite Video Games and Characters
+# Gaming Icons Inc. Exploration Project with my Favorite Video Games and Characters
 
 ## Description
 
@@ -114,8 +114,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# characterCardsReact
-# videoGamesReact
-# ReactCards
-# ReactCards
