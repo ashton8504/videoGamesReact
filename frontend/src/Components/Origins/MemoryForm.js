@@ -28,7 +28,7 @@ const StyledTextarea = styled.textarea`
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid hsl(154, 84%, 70%);
-  width: 50%;
+  width: 30%;
   height: 200px;
   resize: vertical;
   font-family: "RetroFont", sans-serif;
@@ -45,7 +45,7 @@ const StyledButton = styled.button`
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid hsl(154, 84%, 70%);
-  width: 20%;
+  width: 15%;
   resize: vertical;
   color: white;
   cursor: pointer;
@@ -59,6 +59,7 @@ const StyledButton = styled.button`
 
 export default function MemoryForm() {
   const [newMemory, setNewMemory] = useState("");
+  const [isLeavingMemory, setIsLeavingMemory] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -66,7 +67,7 @@ export default function MemoryForm() {
       await axios.post("http://localhost:3001/api/memories", {
         memory: newMemory,
       });
-      setNewMemory(""); // Clear the input field after submitting
+      setNewMemory("");
     } catch (error) {
       console.error("Error posting memory:", error);
     }
@@ -77,21 +78,33 @@ export default function MemoryForm() {
       handleSubmit(event);
     }
   };
+  const handleStartLeavingMemory = () => {
+    setIsLeavingMemory(true);
+  };
 
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
         <StyledLine />
-        <StyledLabel htmlFor="memoryInput">Gaming Memory</StyledLabel>
-        <StyledTextarea
-          id="memoryInput"
-          value={newMemory}
-          onChange={(e) => setNewMemory(e.target.value)}
-          required
-          onKeyDown={handleKeyPress}
-        />
-        <StyledButton type="submit">Submit</StyledButton>
-        <StyledLine />
+        {!isLeavingMemory && (
+          <StyledButton onClick={handleStartLeavingMemory}>
+            Leave a Memory
+          </StyledButton>
+        )}
+        {isLeavingMemory && (
+          <>
+            <StyledLabel htmlFor="memoryInput">Gaming Memory</StyledLabel>
+            <StyledTextarea
+              id="memoryInput"
+              value={newMemory}
+              onChange={(e) => setNewMemory(e.target.value)}
+              required
+              onKeyDown={handleKeyPress}
+            />
+            <StyledButton type="submit">Submit</StyledButton>
+            <StyledLine />
+          </>
+        )}
       </StyledForm>
     </Container>
   );
