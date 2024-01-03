@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import MemoryDisplay from "./MemoryDisplay";
 
 // Styled Components
 const StyledForm = styled.form`
@@ -65,10 +66,15 @@ export default function MemoryForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/api/memories", {
+      const response = await axios.post("http://localhost:3001/api/memories", {
         memory: newMemory,
       });
+
       setNewMemory("");
+      setMemories((prevMemories) => [
+        ...prevMemories,
+        { message: response.data.memory },
+      ]);
     } catch (error) {
       console.error("Error posting memory:", error);
     }
@@ -79,6 +85,7 @@ export default function MemoryForm() {
       handleSubmit(event);
     }
   };
+
   const handleStartLeavingMemory = () => {
     setIsLeavingMemory(true);
   };
@@ -106,6 +113,7 @@ export default function MemoryForm() {
             <StyledLine />
           </>
         )}
+        <MemoryDisplay memories={memories} />{" "}
       </StyledForm>
     </Container>
   );
