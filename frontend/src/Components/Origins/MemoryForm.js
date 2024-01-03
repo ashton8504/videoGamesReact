@@ -60,6 +60,7 @@ const StyledButton = styled.button`
 export default function MemoryForm() {
   const [newMemory, setNewMemory] = useState("");
   const [isLeavingMemory, setIsLeavingMemory] = useState(false);
+  const [memories, setMemories] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
