@@ -72,6 +72,12 @@ export default function MemoryForm() {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSubmit(event);
+    }
+  };
+
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
@@ -82,6 +88,7 @@ export default function MemoryForm() {
           value={newMemory}
           onChange={(e) => setNewMemory(e.target.value)}
           required
+          onKeyDown={handleKeyPress}
         />
         <StyledButton type="submit">Submit</StyledButton>
         <StyledLine />
