@@ -45,7 +45,7 @@ const StyledButton = styled.button`
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid hsl(154, 84%, 70%);
-  width: 10%;
+  width: 20%;
   resize: vertical;
   color: white;
   cursor: pointer;

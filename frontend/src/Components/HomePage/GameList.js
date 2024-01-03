@@ -41,6 +41,7 @@ const StyledInput = styled.input`
   margin-bottom: 1rem;
   border: 2px solid lightblue;
   padding: 0.5rem;
+  font-family: "RetroFont", sans-serif;
 `;
 
 const StyledButton = styled.button`
