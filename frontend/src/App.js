@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
 `;
 
-function App() {
+export default function App() {
   return (
     <StyledContainer>
       <BrowserRouter>
@@ -25,5 +25,3 @@ function App() {
     </StyledContainer>
   );
 }
-
-export default App;
