@@ -116,9 +116,10 @@ export default function CustomNavbar() {
           className={`justify-content-end${showMenu ? " show" : ""}`}
         >
           <CustomNav>
-            <StyledNavLink exact to="/" activeClassName="active">
+            <StyledNavLink to="/" activeclassName="active">
               Home
             </StyledNavLink>
+
             {isMobile ? (
               <>
                 <StyledNavLink to="/gaming-origins">
