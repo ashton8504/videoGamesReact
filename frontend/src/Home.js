@@ -88,8 +88,8 @@ export default function Home() {
           <Divider2 />
           <GameList />
         </PageContent>
-        <StyledInterlaced />
       </StyledContactPage>
+      <StyledInterlaced />
       <Footer />
     </div>
   );
