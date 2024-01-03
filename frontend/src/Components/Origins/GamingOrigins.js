@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MemoryForm from "./MemoryForm";
 
 //Styled Components
 const StyledH1 = styled.h1`
@@ -20,8 +21,8 @@ const StyledParagraph = styled.p`
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
   margin-top: 2rem;
   margin-bottom: 2rem;
-  max-width: 800px; /* Set your desired max width */
-  margin: 0 auto; /* Center the paragraph */
+  max-width: 800px;
+  margin: 0 auto;
 `;
 export default function GamingOrigins() {
   return (
@@ -455,10 +456,11 @@ export default function GamingOrigins() {
         why I decided to learn how to code and become a developer.
       </StyledParagraph>
       <br />
-      {/* <StyledParagraph>
+      <StyledParagraph>
         I hope you enjoyed this website. If you like leave a comment below about
         one of your favorite memories while playing a video game.
-      </StyledParagraph> */}
+      </StyledParagraph>
+      <MemoryForm />
     </div>
   );
 }
