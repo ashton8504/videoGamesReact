@@ -72,7 +72,7 @@ const Divider2 = styled.hr`
   margin-bottom: 2rem;
 `;
 
-function Home() {
+export default function Home() {
   return (
     <div className="Home">
       <CustomNavbar />
@@ -94,5 +94,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
