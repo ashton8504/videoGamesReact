@@ -75,6 +75,7 @@ export default function MemoryForm() {
         ...prevMemories,
         { message: response.data.memory },
       ]);
+      setIsLeavingMemory(false);
     } catch (error) {
       console.error("Error posting memory:", error);
     }
@@ -110,9 +111,12 @@ export default function MemoryForm() {
               onKeyDown={handleKeyPress}
             />
             <StyledButton type="submit">Submit</StyledButton>
-            <MemoryDisplay memories={memories} /> <StyledLine />
           </>
         )}
+        {memories.length > 0 && !isLeavingMemory && (
+          <MemoryDisplay memories={memories} />
+        )}
+        {memories.length > 0 && !isLeavingMemory && <StyledLine />}
       </StyledForm>
     </Container>
   );
