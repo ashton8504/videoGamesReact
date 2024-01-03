@@ -51,8 +51,10 @@ const StyledButton = styled.button`
   padding: 0.5rem;
   background-color: dodgerblue;
   color: white;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
+  font-family: "RetroFont", sans-serif;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #4da6ff;

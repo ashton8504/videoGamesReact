@@ -34,6 +34,29 @@ const StyledTextarea = styled.textarea`
   font-family: "RetroFont", sans-serif;
 `;
 
+const StyledLine = styled.hr`
+  border: 2px solid hsl(154, 84%, 70%);
+  width: 50%;
+`;
+
+const StyledButton = styled.button`
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(154, 84%, 70%);
+  width: 10%;
+  resize: vertical;
+  color: white;
+  cursor: pointer;
+  font-family: "RetroFont", sans-serif;
+  background-color: dodgerblue;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #4da6ff;
+  }
+`;
+
 export default function MemoryForm() {
   const [newMemory, setNewMemory] = useState("");
 
@@ -52,6 +75,7 @@ export default function MemoryForm() {
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
+        <StyledLine />
         <StyledLabel htmlFor="memoryInput">Gaming Memory</StyledLabel>
         <StyledTextarea
           id="memoryInput"
@@ -59,7 +83,8 @@ export default function MemoryForm() {
           onChange={(e) => setNewMemory(e.target.value)}
           required
         />
-        <button type="submit">Submit</button>
+        <StyledButton type="submit">Submit</StyledButton>
+        <StyledLine />
       </StyledForm>
     </Container>
   );
