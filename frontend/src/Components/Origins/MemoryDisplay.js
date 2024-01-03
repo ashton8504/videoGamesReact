@@ -1,37 +1,64 @@
 import styled from "styled-components";
 
-const StyledLi = styled.li`
+const MemoryContainer = styled.div`
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem !important;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+`;
+
+const MemoryText = styled.p`
   font-size: 1.5rem;
-  margin-bottom: 1rem;
   font-family: "RetroFont", sans-serif;
-  color: hsl(154, 84%, 70%);
-  text-shadow: 0 0 4px hsl(154, 84%, 70%);
-  list-style-type: none;
+  color: black; /* Change font color to black */
+  margin: 0;
+`;
+
+const DeleteButton = styled.button`
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: crimson;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
 `;
 
 const StyledH2 = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
   margin-top: 5rem;
+  text-align: center;
   font-family: "RetroFont", sans-serif;
   color: hsl(154, 84%, 70%);
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
 `;
 
-export default function MemoryDisplay({ memories }) {
+export default function MemoryDisplay({ memories, onDelete }) {
+  const handleDelete = (index) => {
+    onDelete(index);
+  };
+
   return (
     <div>
       <StyledH2>Submitted Memories</StyledH2>
       <div>
-        <ul>
-          {memories &&
-            memories.map((memory, index) => {
-              console.log("Memory message:", memory && memory.message);
-              return (
-                <StyledLi key={index}>{memory && memory.message}</StyledLi>
-              );
-            })}
-        </ul>
+        {memories &&
+          memories.map((memory, index) => {
+            console.log("Memory message:", memory && memory.message);
+            return (
+              <MemoryContainer key={index}>
+                <MemoryText>{memory && memory.message}</MemoryText>
+              </MemoryContainer>
+            );
+          })}
       </div>
     </div>
   );
