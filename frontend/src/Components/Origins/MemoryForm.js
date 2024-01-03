@@ -110,10 +110,9 @@ export default function MemoryForm() {
               onKeyDown={handleKeyPress}
             />
             <StyledButton type="submit">Submit</StyledButton>
-            <StyledLine />
+            <MemoryDisplay memories={memories} /> <StyledLine />
           </>
         )}
-        <MemoryDisplay memories={memories} />{" "}
       </StyledForm>
     </Container>
   );

@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from "react";
-
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+
+//Retro Styles For Terminal
+const linesAnimation = keyframes`
+  0% { background-position: 0px 0px; }
+  50% { background-position: 0px 0px; }
+  51% { background-position: 0px 2px; }
+  100% { background-position: 0px 2px; }
+`;
+
+const StyledInterlaced = styled.div`
+  position: fixed;
+  background: repeating-linear-gradient(
+    transparent 0px 1px,
+    hsla(154, 0%, 0%, 0.3) 3px 4px
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  animation: ${linesAnimation} 0.06666666s linear infinite;
+`;
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
   font-size: 1.8rem;
@@ -106,7 +128,6 @@ export default function CustomNavbar() {
           onClick={toggleMobileMenu}
           style={{
             border: "1px solid hsl(154, 84%, 70%)",
-
             backgroundColor: "#68dbaa",
           }}
         />
