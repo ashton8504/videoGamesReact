@@ -18,16 +18,6 @@ const StyledCard = styled.div`
   perspective: 1000px;
 `;
 
-const StyledImage = styled.img`
-  width: 100%;
-  height: 300px;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  backface-visibility: hidden;
-  transition: transform 0.5s ease-in-out;
-  cursor: pointer;
-`;
-
 const StyledName = styled.h3`
   font-size: 1.3rem;
   text-align: center;
@@ -39,6 +29,16 @@ const StyledName = styled.h3`
   margin-right: auto;
   color: hsl(154, 84%, 70%);
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 `;
 
 const StyledControllerImage = styled.img`
