@@ -72,6 +72,21 @@ const Divider2 = styled.hr`
   margin-bottom: 2rem;
 `;
 
+const StyledImage = styled.img`
+  width: 50%;
+  height: 600px;
+  border-radius: 5px;
+  border: 2px solid lightblue;
+  display: block;
+  margin: 5rem auto 0;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+    margin-top: 2rem;
+  }
+`;
+
 export default function Home() {
   return (
     <div className="Home">
@@ -87,6 +102,10 @@ export default function Home() {
           <SectionHeader>Game List</SectionHeader>
           <Divider2 />
           <GameList />
+          <StyledImage
+            src="imgs/VideoGameLink.gif"
+            alt="Photo of Link playing video games"
+          />
         </PageContent>
       </StyledContactPage>
       <StyledInterlaced />
