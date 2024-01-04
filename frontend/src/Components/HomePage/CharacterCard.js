@@ -1,44 +1,21 @@
-import React, { useState } from "react";
-import { Carousel, Col } from "react-bootstrap";
+import React from "react";
 import styled from "styled-components";
 import Character from "./Character";
 import videoGameCharacters from "../../data/videoGameCharacters";
 
-const CenteredCarousel = styled.div`
+const StyledList = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 `;
 
-const StyledCol = styled(Col)`
-  max-width: 80%;
-`;
-
-const StyledCharacter = styled(Character)`
-  margin: 0 auto;
-`;
-
-export default function CharacterCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+export default function CharacterList() {
   return (
-    <CenteredCarousel>
-      <StyledCol>
-        <Carousel
-          activeIndex={index}
-          onSelect={handleSelect}
-          controls={false}
-          interval={2000}
-        >
-          {videoGameCharacters.map((character) => (
-            <Carousel.Item key={character.name}>
-              <StyledCharacter character={character} />
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </StyledCol>
-    </CenteredCarousel>
+    <StyledList>
+      {videoGameCharacters.map((character) => (
+        <Character key={character.name} Character={character} />
+      ))}
+    </StyledList>
   );
 }
