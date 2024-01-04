@@ -24,15 +24,21 @@ const StyledLabel = styled.label`
 `;
 
 const StyledTextarea = styled.textarea`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid hsl(154, 84%, 70%);
-  width: 30%;
+  width: 20%;
   height: 200px;
   resize: vertical;
   font-family: "RetroFont", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    height: 200px;
+    width: 80%;
+  }
 `;
 
 const StyledLine = styled.hr`
@@ -106,7 +112,7 @@ export default function MemoryForm() {
       <StyledForm onSubmit={handleSubmit}>
         {!isLeavingMemory && (
           <StyledButton onClick={handleStartLeavingMemory}>
-            Leave a Memory
+            Leave Memory
           </StyledButton>
         )}
         {isLeavingMemory && (

@@ -5,10 +5,15 @@ const MemoryContainer = styled.div`
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 4rem !important;
-  width: 50%;
+  width: 80%;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const MemoryText = styled.p`
