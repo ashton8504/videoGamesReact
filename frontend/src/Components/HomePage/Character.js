@@ -5,8 +5,10 @@ const StyledCard = styled.div`
   width: 300px;
   height: 480px;
   border-radius: 10px;
+  margin: 0 auto !important;
   margin: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem !important;
+  margin-bottom: 5rem !important;
   padding: 1rem;
   background-color: black;
   border: 3px solid antiquewhite;
