@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-  width: 370px;
+  width: 340px;
   cursor: pointer;
-  height: 530px;
-  border-radius: 5px;
+  height: 500px;
+  border-radius: 10px;
   margin: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
