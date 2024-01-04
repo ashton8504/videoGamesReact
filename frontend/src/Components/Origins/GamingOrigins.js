@@ -24,6 +24,18 @@ const StyledParagraph = styled.p`
   max-width: 800px;
   margin: 0 auto;
 `;
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+`;
+
+const StyledLine = styled.hr`
+  border: 2px solid hsl(154, 84%, 70%);
+  width: 50%;
+`;
 export default function GamingOrigins() {
   return (
     <div>
@@ -409,7 +421,7 @@ export default function GamingOrigins() {
           }
         `}
       </style>
-      <div class="container">
+      <StyledContainer class="container">
         <StyledH1>How it all began...</StyledH1>
         <div class="arcade-machine">
           <div class="shadow"></div>
@@ -438,7 +450,8 @@ export default function GamingOrigins() {
             <div class="stripes"></div>
           </div>
         </div>
-      </div>
+        <StyledLine />
+      </StyledContainer>
       <StyledParagraph>
         My first video game memory was back in the 1980's and playing Super
         Mario Bro's for the first time.

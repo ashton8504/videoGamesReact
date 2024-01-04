@@ -38,6 +38,7 @@ const StyledTextarea = styled.textarea`
 const StyledLine = styled.hr`
   border: 2px solid hsl(154, 84%, 70%);
   width: 50%;
+  margin: 0 auto;
 `;
 
 const StyledButton = styled.button`
@@ -94,7 +95,6 @@ export default function MemoryForm() {
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
-        <StyledLine />
         {!isLeavingMemory && (
           <StyledButton onClick={handleStartLeavingMemory}>
             Leave a Memory
@@ -116,8 +116,9 @@ export default function MemoryForm() {
         {memories.length > 0 && !isLeavingMemory && (
           <MemoryDisplay memories={memories} />
         )}
-        {memories.length > 0 && !isLeavingMemory && <StyledLine />}
+        {memories.length > 0 && !isLeavingMemory}
       </StyledForm>
+      <StyledLine />
     </Container>
   );
 }

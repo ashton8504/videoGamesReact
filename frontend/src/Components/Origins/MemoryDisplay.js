@@ -14,21 +14,8 @@ const MemoryContainer = styled.div`
 const MemoryText = styled.p`
   font-size: 1.5rem;
   font-family: "RetroFont", sans-serif;
-  color: black; /* Change font color to black */
+  color: black;
   margin: 0;
-`;
-
-const DeleteButton = styled.button`
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  padding: 0.5rem;
-  border: none;
-  background-color: crimson;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
 `;
 
 const StyledH2 = styled.h2`
@@ -42,10 +29,6 @@ const StyledH2 = styled.h2`
 `;
 
 export default function MemoryDisplay({ memories, onDelete }) {
-  const handleDelete = (index) => {
-    onDelete(index);
-  };
-
   return (
     <div>
       <StyledH2>Submitted Memories</StyledH2>
