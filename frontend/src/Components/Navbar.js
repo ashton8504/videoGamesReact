@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -108,7 +108,6 @@ export default function CustomNavbar() {
             backgroundColor: "#68dbaa",
           }}
         />
-
         <Navbar.Collapse
           id="basic-navbar-nav"
           className={`justify-content-end${showMenu ? " show" : ""}`}
