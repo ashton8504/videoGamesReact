@@ -107,6 +107,10 @@ export default function MemoryForm() {
     setIsLeavingMemory(true);
   };
 
+  const handleDeleteMemory = (updatedMemories) => {
+    setMemories(updatedMemories);
+  };
+
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
@@ -129,7 +133,7 @@ export default function MemoryForm() {
           </>
         )}
         {memories.length > 0 && !isLeavingMemory && (
-          <MemoryDisplay memories={memories} />
+          <MemoryDisplay memories={memories} onDelete={handleDeleteMemory} />
         )}
         {memories.length > 0 && !isLeavingMemory}
       </StyledForm>

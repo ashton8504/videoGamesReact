@@ -33,20 +33,39 @@ const StyledH2 = styled.h2`
   text-shadow: 0 0 4px hsl(154, 84%, 70%);
 `;
 
+const DeleteButton = styled.button`
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #ff6961;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem; /* Spacing between memory and delete button */
+`;
+
 export default function MemoryDisplay({ memories, onDelete }) {
+  const handleDelete = (index) => {
+    if (onDelete) {
+      const updatedMemories = memories.filter((_, i) => i !== index);
+      onDelete(updatedMemories);
+    }
+  };
+
   return (
     <div>
       <StyledH2>Submitted Memories</StyledH2>
       <div>
         {memories &&
-          memories.map((memory, index) => {
-            console.log("Memory message:", memory && memory.message);
-            return (
-              <MemoryContainer key={index}>
-                <MemoryText>{memory && memory.message}</MemoryText>
-              </MemoryContainer>
-            );
-          })}
+          memories.map((memory, index) => (
+            <MemoryContainer key={index}>
+              <MemoryText>{memory && memory.message}</MemoryText>
+              {/* Delete button for each memory */}
+              <DeleteButton onClick={() => handleDelete(index)}>
+                Delete
+              </DeleteButton>
+            </MemoryContainer>
+          ))}
       </div>
     </div>
   );
