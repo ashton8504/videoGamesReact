@@ -60,7 +60,6 @@ export default function MemoryDisplay({ memories, onDelete }) {
           memories.map((memory, index) => (
             <MemoryContainer key={index}>
               <MemoryText>{memory && memory.message}</MemoryText>
-              {/* Delete button for each memory */}
               <DeleteButton onClick={() => handleDelete(index)}>
                 Delete
               </DeleteButton>
