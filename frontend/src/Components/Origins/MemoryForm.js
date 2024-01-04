@@ -1,4 +1,4 @@
-import React, { useState, useEf } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import MemoryDisplay from "./MemoryDisplay";
