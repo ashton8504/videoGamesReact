@@ -48,12 +48,21 @@ const StyledButton = styled.button`
   border-radius: 0.5rem;
   border: 1px solid hsl(154, 84%, 70%);
   width: 15%;
+  max-width: 200px;
   resize: vertical;
   color: white;
   cursor: pointer;
   font-family: "RetroFont", sans-serif;
   background-color: dodgerblue;
   transition: background-color 0.3s ease;
+
+  /* Updated mobile styles */
+  @media (max-width: 768px) {
+    width: 30%;
+    max-width: none;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
   &:hover {
     background-color: #4da6ff;
   }
