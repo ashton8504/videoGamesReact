@@ -10,7 +10,7 @@ const CenteredCarousel = styled.div`
 `;
 
 const StyledCol = styled(Col)`
-  max-width: 80%; /* Adjust width as needed */
+  max-width: 80%;
 `;
 
 const StyledCharacter = styled(Character)`
@@ -18,20 +18,23 @@ const StyledCharacter = styled(Character)`
 `;
 
 export default function CharacterCarousel() {
-  //Feature is not currently working
-  const [pauseCarousel, setPauseCarousel] = useState(false);
+  const [index, setIndex] = useState(0);
 
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <CenteredCarousel>
       <StyledCol>
-        <Carousel controls={false} interval={2000} pause={pauseCarousel}>
+        <Carousel
+          activeIndex={index}
+          onSelect={handleSelect}
+          controls={false}
+          interval={2000}
+        >
           {videoGameCharacters.map((character) => (
             <Carousel.Item key={character.name}>
-              <StyledCharacter
-                pauseCarousel={pauseCarousel}
-                setPauseCarousel={setPauseCarousel}
-                character={character}
-              />
+              <StyledCharacter character={character} />
             </Carousel.Item>
           ))}
         </Carousel>

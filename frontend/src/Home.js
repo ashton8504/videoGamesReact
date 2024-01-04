@@ -93,12 +93,12 @@ export default function Home() {
       <CustomNavbar />
       <StyledContactPage>
         <PageContent>
-          <SectionHeader>Favorite Characters</SectionHeader>
-          <Divider />
-          <CharacterList />
           <SectionHeader>Favorite Video Games</SectionHeader>
           <Divider />
           <VideoGameList />
+          <SectionHeader>Favorite Characters</SectionHeader>
+          <Divider />
+          <CharacterList />
           <SectionHeader>Game List</SectionHeader>
           <Divider2 />
           <GameList />
