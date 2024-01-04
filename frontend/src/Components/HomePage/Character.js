@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.div`
@@ -56,16 +56,32 @@ const StyledAbilities = styled.p`
   font-family: "RetroFont", sans-serif;
 `;
 
-export default function Character({ Character }) {
+export default function Character({
+  character,
+  pauseCarousel,
+  setPauseCarousel,
+}) {
+  const handleMouseEnter = () => {
+    if (setPauseCarousel && !pauseCarousel) {
+      setPauseCarousel(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (setPauseCarousel && pauseCarousel) {
+      setPauseCarousel(false);
+    }
+  };
+
   return (
-    <StyledCard>
+    <StyledCard onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <StyledImage
-        src={`/characters/${Character.photoName}`}
-        alt={Character.name}
+        src={`/characters/${character.photoName}`}
+        alt={character.name}
       />
-      <StyledName>{Character.name}</StyledName>
-      <StyledGame>{Character.game}</StyledGame>
-      <StyledAbilities>{Character.abilities}</StyledAbilities>
+      <StyledName>{character.name}</StyledName>
+      <StyledGame>{character.game}</StyledGame>
+      <StyledAbilities>{character.abilities}</StyledAbilities>
     </StyledCard>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel, Col } from "react-bootstrap";
 import styled from "styled-components";
 import Character from "./Character";
@@ -18,13 +18,20 @@ const StyledCharacter = styled(Character)`
 `;
 
 export default function CharacterCarousel() {
+  //Feature is not currently working
+  const [pauseCarousel, setPauseCarousel] = useState(false);
+
   return (
     <CenteredCarousel>
       <StyledCol>
-        <Carousel controls={false} interval={2000}>
+        <Carousel controls={false} interval={2000} pause={pauseCarousel}>
           {videoGameCharacters.map((character) => (
             <Carousel.Item key={character.name}>
-              <StyledCharacter Character={character} />
+              <StyledCharacter
+                pauseCarousel={pauseCarousel}
+                setPauseCarousel={setPauseCarousel}
+                character={character}
+              />
             </Carousel.Item>
           ))}
         </Carousel>
