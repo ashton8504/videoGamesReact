@@ -55,7 +55,7 @@ export default function MemoryDisplay({ memories, onDelete }) {
       <div>
         {memories.map((memory, index) => (
           <MemoryContainer key={index}>
-            <MemoryText>{memory.message}</MemoryText>
+            <MemoryText>{memory && memory.message}</MemoryText>
             <DeleteButton onClick={() => handleDelete(index)}>
               Delete
             </DeleteButton>

@@ -46,7 +46,7 @@ app.delete("/api/memories/:id", (req, res) => {
   );
 
   if (memoryIndex !== -1) {
-    const deletedMemory = gamingMemories.splice(memoryIndex, 1);
+    const [deletedMemory] = gamingMemories.splice(memoryIndex, 1);
     res
       .status(200)
       .json({ message: "Memory deleted successfully", memory: deletedMemory });
