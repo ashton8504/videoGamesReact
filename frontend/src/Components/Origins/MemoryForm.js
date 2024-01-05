@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import MemoryDisplay from "./MemoryDisplay";
@@ -77,7 +77,14 @@ const StyledButton = styled.button`
 export default function MemoryForm() {
   const [newMemory, setNewMemory] = useState("");
   const [isLeavingMemory, setIsLeavingMemory] = useState(false);
-  const [memories, setMemories] = useState([]);
+  const [memories, setMemories] = useState(() => {
+    const storedMemories = JSON.parse(localStorage.getItem("memories"));
+    return storedMemories || [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("memories", JSON.stringify(memories));
+  }, [memories]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
