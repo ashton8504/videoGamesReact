@@ -49,6 +49,7 @@ const StyledButton = styled.button`
   margin-bottom: 1rem;
   padding: 0.5rem;
   font-size: 1.3rem;
+  font-family: "RetroFont", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -105,7 +106,7 @@ const StyledDeleteButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: #ff0000;
+    background-color: #ff6961;
   }
 `;
 

@@ -60,6 +60,7 @@ const StyledButton = styled.button`
   max-width: 200px;
   resize: vertical;
   cursor: pointer;
+  font-family: "RetroFont", sans-serif;
   transition: background-color 0.3s ease;
 
   /* Updated mobile styles */

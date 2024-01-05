@@ -37,12 +37,16 @@ const StyledH2 = styled.h2`
 const DeleteButton = styled.button`
   font-size: 1rem;
   padding: 0.3rem 0.5rem;
-  border-radius: 0.3rem;
   border: none;
-  background-color: #ff6961;
-  color: white;
+  font-family: "RetroFont", sans-serif;
+  width: 60%;
+  ${"" /* background-color: #ff6961; */}
+  color: black;
   cursor: pointer;
-  margin-top: 1rem; /* Spacing between memory and delete button */
+  margin-top: 1rem;
+  &:hover {
+    background-color: #ff6961;
+  }
 `;
 
 export default function MemoryDisplay({ memories, onDelete }) {
