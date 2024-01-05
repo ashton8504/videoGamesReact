@@ -46,25 +46,21 @@ const DeleteButton = styled.button`
 
 export default function MemoryDisplay({ memories, onDelete }) {
   const handleDelete = (index) => {
-    if (onDelete) {
-      const updatedMemories = memories.filter((_, i) => i !== index);
-      onDelete(updatedMemories);
-    }
+    onDelete(index);
   };
 
   return (
     <div>
       <StyledH2>Submitted Memories</StyledH2>
       <div>
-        {memories &&
-          memories.map((memory, index) => (
-            <MemoryContainer key={index}>
-              <MemoryText>{memory && memory.message}</MemoryText>
-              <DeleteButton onClick={() => handleDelete(index)}>
-                Delete
-              </DeleteButton>
-            </MemoryContainer>
-          ))}
+        {memories.map((memory, index) => (
+          <MemoryContainer key={index}>
+            <MemoryText>{memory.message}</MemoryText>
+            <DeleteButton onClick={() => handleDelete(index)}>
+              Delete
+            </DeleteButton>
+          </MemoryContainer>
+        ))}
       </div>
     </div>
   );

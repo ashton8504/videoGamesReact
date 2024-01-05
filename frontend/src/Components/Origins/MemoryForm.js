@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import MemoryDisplay from "./MemoryDisplay";
@@ -77,14 +77,7 @@ const StyledButton = styled.button`
 export default function MemoryForm() {
   const [newMemory, setNewMemory] = useState("");
   const [isLeavingMemory, setIsLeavingMemory] = useState(false);
-  const [memories, setMemories] = useState(() => {
-    const storedMemories = JSON.parse(localStorage.getItem("memories"));
-    return storedMemories || [];
-  });
-
-  useEffect(() => {
-    localStorage.setItem("memories", JSON.stringify(memories));
-  }, [memories]);
+  const [memories, setMemories] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -114,7 +107,8 @@ export default function MemoryForm() {
     setIsLeavingMemory(true);
   };
 
-  const handleDeleteMemory = (updatedMemories) => {
+  const handleDeleteMemory = (index) => {
+    const updatedMemories = memories.filter((_, i) => i !== index);
     setMemories(updatedMemories);
   };
 
@@ -140,9 +134,11 @@ export default function MemoryForm() {
           </>
         )}
         {memories.length > 0 && !isLeavingMemory && (
-          <MemoryDisplay memories={memories} onDelete={handleDeleteMemory} />
+          <MemoryDisplay
+            memories={memories}
+            onDelete={(index) => handleDeleteMemory(index)}
+          />
         )}
-        {memories.length > 0 && !isLeavingMemory}
       </StyledForm>
       <StyledLine />
     </Container>
