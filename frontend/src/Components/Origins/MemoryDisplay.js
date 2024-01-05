@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MemoryContainer = styled.div`
-  background-color: #f0f0f0;
+  background-color: #050e09;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 4rem !important;
@@ -10,7 +10,7 @@ const MemoryContainer = styled.div`
   margin: 0 auto;
   text-align: center;
   position: relative;
-
+  border: 2px solid antiquewhite;
   @media (max-width: 768px) {
     width: 90%;
   }
@@ -19,7 +19,8 @@ const MemoryContainer = styled.div`
 const MemoryText = styled.p`
   font-size: 1.5rem;
   font-family: "RetroFont", sans-serif;
-  color: black;
+  font-family: "RetroFont", sans-serif;
+  color: hsl(154, 84%, 70%);
   margin: 0;
 `;
 

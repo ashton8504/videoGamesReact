@@ -28,11 +28,17 @@ const StyledTextarea = styled.textarea`
   padding: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid hsl(154, 84%, 70%);
+  background-color: black;
+  border: 2px solid hsl(154, 84%, 70%);
   width: 20%;
   height: 200px;
   resize: vertical;
   font-family: "RetroFont", sans-serif;
+  color: hsl(154, 84%, 70%);
+  &:focus {
+    outline: none;
+    border-color: hsl(154, 84%, 70%);
+  }
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -129,6 +135,7 @@ export default function MemoryForm() {
               onChange={(e) => setNewMemory(e.target.value)}
               required
               onKeyDown={handleKeyPress}
+              placeholder="Leave a memory..."
             />
             <StyledButton type="submit">Submit</StyledButton>
           </>
