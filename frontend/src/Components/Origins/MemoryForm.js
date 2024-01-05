@@ -29,17 +29,16 @@ const StyledTextarea = styled.textarea`
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   background-color: black;
-  border: 2px solid hsl(154, 84%, 70%);
+  border: 1px solid antiquewhite;
   width: 20%;
   height: 200px;
   resize: vertical;
   font-family: "RetroFont", sans-serif;
-  color: hsl(154, 84%, 70%);
+  color: white;
   &:focus {
     outline: none;
     border-color: hsl(154, 84%, 70%);
   }
-
   @media (max-width: 768px) {
     font-size: 1.2rem;
     height: 200px;
@@ -57,15 +56,10 @@ const StyledButton = styled.button`
   font-size: 1.5rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  ${"" /* border-radius: 0.5rem; */}
-  ${"" /* border: 1px solid hsl(154, 84%, 70%); */}
   width: 15%;
   max-width: 200px;
   resize: vertical;
-  ${"" /* color: white; */}
   cursor: pointer;
-  ${"" /* font-family: "RetroFont", sans-serif; */}
-  ${"" /* background-color: dodgerblue; */}
   transition: background-color 0.3s ease;
 
   /* Updated mobile styles */
@@ -104,7 +98,10 @@ export default function MemoryForm() {
   };
 
   const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && event.shiftKey) {
+      event.preventDefault();
+      setNewMemory((prevMemory) => prevMemory + "\n");
+    } else if (event.key === "Enter") {
       handleSubmit(event);
     }
   };
