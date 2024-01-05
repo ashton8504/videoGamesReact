@@ -112,10 +112,17 @@ export default function MemoryForm() {
   };
 
   const handleDeleteMemory = (index) => {
-    const updatedMemories = memories.filter((_, i) => i !== index);
+    console.log("Deleting index", index);
+
+    const updatedMemories = memories.filter((_, i) => {
+      const shouldKeep = i !== index && memories[i].message.trim() !== "";
+      console.log(`Index ${i}, Should keep? ${shouldKeep}`);
+      return shouldKeep;
+    });
+
+    console.log("Updated memories", updatedMemories);
     setMemories(updatedMemories);
   };
-
   return (
     <Container>
       <StyledForm onSubmit={handleSubmit}>
@@ -139,10 +146,7 @@ export default function MemoryForm() {
           </>
         )}
         {memories.length > 0 && !isLeavingMemory && (
-          <MemoryDisplay
-            memories={memories}
-            onDelete={(index) => handleDeleteMemory(index)}
-          />
+          <MemoryDisplay memories={memories} onDelete={handleDeleteMemory} />
         )}
       </StyledForm>
       <StyledLine />
