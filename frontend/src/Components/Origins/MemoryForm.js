@@ -57,15 +57,15 @@ const StyledButton = styled.button`
   font-size: 1.5rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid hsl(154, 84%, 70%);
+  ${"" /* border-radius: 0.5rem; */}
+  ${"" /* border: 1px solid hsl(154, 84%, 70%); */}
   width: 15%;
   max-width: 200px;
   resize: vertical;
-  color: white;
+  ${"" /* color: white; */}
   cursor: pointer;
-  font-family: "RetroFont", sans-serif;
-  background-color: dodgerblue;
+  ${"" /* font-family: "RetroFont", sans-serif; */}
+  ${"" /* background-color: dodgerblue; */}
   transition: background-color 0.3s ease;
 
   /* Updated mobile styles */
