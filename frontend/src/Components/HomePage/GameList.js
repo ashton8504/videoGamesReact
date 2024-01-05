@@ -46,16 +46,10 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
   width: 60%;
-  ${"" /* border-radius: 5px; */}
   margin-bottom: 1rem;
-  ${"" /* border: 2px solid dodgerblue; */}
   padding: 0.5rem;
-  ${"" /* background-color: dodgerblue; */}
-  ${"" /* color: white; */}
   font-size: 1.3rem;
-  ${"" /* font-weight: bold; */}
   cursor: pointer;
-  ${"" /* font-family: "RetroFont", sans-serif; */}
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #4da6ff;
@@ -105,12 +99,9 @@ const StyledBorderBottom = styled.hr`
 
 const StyledDeleteButton = styled.button`
   width: 100%;
-  ${"" /* border-radius: 5px; */}
   margin-bottom: 1rem;
+  border: 3px solid red;
   border: none;
-  ${"" /* background-color: dodgerblue; */}
-  ${"" /* color: white; */}
-  ${"" /* font-weight: bold; */}
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
