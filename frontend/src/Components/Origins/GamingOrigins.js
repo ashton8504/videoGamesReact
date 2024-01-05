@@ -23,6 +23,9 @@ const StyledParagraph = styled.p`
   margin-bottom: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const StyledContainer = styled.div`

@@ -142,7 +142,7 @@ const StyledImage = styled.img`
   margin: 5rem auto 0;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-top: 2rem;
   }

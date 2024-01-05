@@ -40,7 +40,6 @@ const DeleteButton = styled.button`
   border: none;
   font-family: "RetroFont", sans-serif;
   width: 60%;
-  ${"" /* background-color: #ff6961; */}
   color: black;
   cursor: pointer;
   margin-top: 1rem;
