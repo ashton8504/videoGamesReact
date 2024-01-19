@@ -87,11 +87,17 @@ export default function MemoryForm() {
         memory: newMemory,
       });
 
+      const newMemoryMessage = response.data.memory.trim();
+      if (newMemoryMessage) {
+        setMemories((prevMemories) => [
+          ...prevMemories,
+          { message: newMemoryMessage },
+        ]);
+      } else {
+        console.error("Received empty memory from the server.");
+      }
+
       setNewMemory("");
-      setMemories((prevMemories) => [
-        ...prevMemories,
-        { message: response.data.memory },
-      ]);
       setIsLeavingMemory(false);
     } catch (error) {
       console.error("Error posting memory:", error);
