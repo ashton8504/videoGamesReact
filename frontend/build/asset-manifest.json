@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0d545e7.css",
+    "main.js": "/static/js/main.b31b9502.js",
+    "static/media/RetroGaming.ttf": "/static/media/RetroGaming.c1a52a602585b2d6baf8.ttf",
+    "index.html": "/index.html",
+    "main.e0d545e7.css.map": "/static/css/main.e0d545e7.css.map",
+    "main.b31b9502.js.map": "/static/js/main.b31b9502.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0d545e7.css",
+    "static/js/main.b31b9502.js"
+  ]
+}
