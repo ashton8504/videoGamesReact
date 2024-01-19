@@ -81,7 +81,10 @@ export default function MemoryForm() {
   const [memories, setMemories] = useState([]);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
+
     try {
       const response = await axios.post("http://localhost:3001/api/memories", {
         memory: newMemory,
@@ -104,14 +107,16 @@ export default function MemoryForm() {
     }
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter" && event.shiftKey) {
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
       event.preventDefault();
-      setNewMemory((prevMemory) => prevMemory + "\n");
-    } else if (event.key === "Enter") {
-      handleSubmit(event);
+      if (event.shiftKey) {
+        setNewMemory((prevMemory) => prevMemory + "\n");
+      } else {
+        handleSubmit();
+      }
     }
-  };
+  }
 
   const handleStartLeavingMemory = () => {
     setIsLeavingMemory(true);
